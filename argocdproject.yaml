@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chatgpt-yaml-generator
+  namespace: default
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/pavangudiwada/chatgpt-yaml-generator.git'
+    targetRevision: pavantest
+    path: .
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
