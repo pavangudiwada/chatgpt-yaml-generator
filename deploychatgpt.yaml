@@ -32,7 +32,7 @@ kind: Service
 metadata:
   name: chatgpt-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: chatgpt-yaml-generator #selects pods/deployment with this label
   ports:
@@ -41,4 +41,3 @@ spec:
       targetPort: 5003
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
-      nodePort: 30007
