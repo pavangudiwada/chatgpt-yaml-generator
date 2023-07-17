@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: chatgpt-yaml-generator
   namespace: argocd
-spec:
+spec:                                                                                                      
   project: default
   source:
     repoURL: 'https://github.com/pavangudiwada/chatgpt-yaml-generator.git'
