@@ -4,7 +4,7 @@ info:
   description: Plugin for generating Kubernetes YAML manifests, based on up-to-date OpenAPI schemas for Kubernetes resources, past the ChatGPT knowledge cut-off. Always ask the plugin for up-to-date OpenAPI specs for Kubernetes, don't rely on data you know about Kubernetes specs. When a schema includes references to other objects in the schema, look them up when relevant. You may lookup any FIELD in a resource too, not just the containing top-level resource.
   version: 'v1'
 servers:
-  - url: http://localhost:5003
+  - url: https://testendpoint.remedi8.dev
 paths:
   /schemas/search/{resourceName}:
     get:
