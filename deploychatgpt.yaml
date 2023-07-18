@@ -17,6 +17,7 @@ spec:
       containers:
       - name: chatgpt-yaml-generator
         image: pavangudiwada/chatgpt:local
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
@@ -41,3 +42,4 @@ spec:
       targetPort: 5003
       # Optional field
       # By default and for convenience, the Kubernetes control plane will allocate a port from a range (default: 30000-32767)
+      nodePort: 31420
