@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: chatgpt-yaml-generator
-        image: pavangudiwada/chatgpt:latest
+        image: pavangudiwada/chatgpt:updated
         imagePullPolicy: Always
         resources:
           requests:
