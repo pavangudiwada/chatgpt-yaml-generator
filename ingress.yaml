@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+    - host: remedi8.dev
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: chatgpt-service
+              servicePort: 31420

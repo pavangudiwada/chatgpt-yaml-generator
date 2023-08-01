@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aws-load-balancer-controller
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://aws.github.io/eks-charts
+    targetRevision: 1.5.5
+    chart: aws-load-balancer-controller
+    helm:
+      values: |
+        releaseName: aws-lb-controller
+        clusterName: robustaopenai
+        serviceAccount:
+          create: false
+          name: aws-load-balancer-controller
+  destination:
+    namespace: kube-system
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
