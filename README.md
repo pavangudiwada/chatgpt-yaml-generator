@@ -50,6 +50,16 @@ Once the local server is running:
 
 The plugin should now be installed and enabled! Watch the video above for ideas on using the plugin.
 
+## Deploying with Kubernetes and ArgoCD
+1. Create a Namespace called `argocd`
+```bash
+kubectl create ns argocd
+```
+2. Install ArgoCD using the Helm chart
+```bash
+helm install argocd argo/argo-cd --namespace argocd 
+```
+
 ## Getting help
 
 Join the [Robusta Slack Community](https://bit.ly/robusta-slack) and ask for help.

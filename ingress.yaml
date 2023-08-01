@@ -5,6 +5,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/subnets: subnet-00eef472cf9d0eb14,subnet-0a692b8c6e1427a97
 spec:
   rules:
     - host: remedi8.dev
