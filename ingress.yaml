@@ -17,4 +17,4 @@ spec:
               service:
                 name: chatgpt-service
                 port:
-                  number: 31420
+                  number: 5003
