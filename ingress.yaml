@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress
@@ -11,6 +11,9 @@ spec:
       http:
         paths:
           - path: /*
+            pathType: ImplementationSpecific
             backend:
-              serviceName: chatgpt-service
-              servicePort: 31420
+              service:
+                name: chatgpt-service
+                port:
+                  number: 31420
